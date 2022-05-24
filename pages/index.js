@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../src/components/footer";
 import HeroSection from "../src/components/HeroSection";
 import InfoNobutton from "../src/components/InfoSection/infoNoButton.js";
@@ -18,7 +18,11 @@ import Head from "next/head";
 import { FloatWhats, Linkao } from "../src/components/NavBar/NavBarElements";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [tamanhoTela, setTamanhoTela] = useState(0);
 
+  useEffect(() => {
+    setTamanhoTela(window.screen.width);
+  }, []);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -47,7 +51,7 @@ export default function Home() {
             content="kMJ2VUUTMm2TdYmxpFy_DdCcanD4zkR_S4WW65TRj-U"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
@@ -59,16 +63,7 @@ export default function Home() {
         </Head>
       </div>
       <AlertProvider template={AlertTemplate} {...options}>
-        <FloatWhats
-          // style={{
-          //   position: "fixed",
-          //   width: "70px",
-          //   height: "70px",
-          //   bottom: "50px",
-          //   right: "250px",
-          //   zIndex: 999,
-          // }}
-        >
+        <FloatWhats>
           <Linkao
             href="https://wa.me/5511952688682"
             className="whatsapp_float"
@@ -80,14 +75,18 @@ export default function Home() {
               whiteSpace: "nowrap",
               padding: "0 20px",
               textDecoration: "none",
-              fontWeight:"bold",
+              fontWeight: "bold",
             }}
           >
             {" "}
-            11-952688682
+            {tamanhoTela >= 768 ? "11-952688682" : ""}
             <i
               className="fa fa-whatsapp whatsapp-icon"
-              style={{ width: "60px", height: "60px", bottom: "0" }}
+              style={{
+                width: tamanhoTela >= 768 ? "60px" : "20px",
+                height: tamanhoTela >= 768 ? "60px" : "20px",
+                bottom: tamanhoTela >= 768 ? "0" : "30px",
+              }}
             ></i>
           </Linkao>
         </FloatWhats>

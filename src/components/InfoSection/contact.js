@@ -82,19 +82,10 @@ export default function InfoSection({
       message: "",
     });
   };
-  const [width, setWidth] = useState(769);
-  function initialState() {
-    const num = Math.max(
-      document.body.scrollWidth,
-      document.documentElement.scrollWidth,
-      document.body.offsetWidth,
-      document.documentElement.offsetWidth,
-      document.documentElement.clientWidth
-    );
-    return setWidth(num);
-  }
+  const [tamanhoTela, setTamanhoTela] = useState(0);
+
   useEffect(() => {
-    initialState();
+    setTamanhoTela(window.screen.width);
   }, []);
 
   return (

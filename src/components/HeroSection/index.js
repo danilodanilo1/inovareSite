@@ -6,22 +6,13 @@ import arrowDown from "../images/arrowUp.svg";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { Linkao } from "../NavBar/NavBarElements";
+import { Heading, TopLine } from "../InfoSection/infoElements";
 
 export default function HeroSection() {
-  const [width, setWidth] = useState(769);
+  const [tamanhoTela, setTamanhoTela] = useState(0);
 
-  function initialState() {
-    const num = Math.max(
-      document.body.scrollWidth,
-      document.documentElement.scrollWidth,
-      document.body.offsetWidth,
-      document.documentElement.offsetWidth,
-      document.documentElement.clientWidth
-    );
-    return setWidth(num);
-  }
   useEffect(() => {
-    initialState();
+    setTamanhoTela(window.screen.width);
   }, []);
 
   return (
@@ -32,6 +23,8 @@ export default function HeroSection() {
           display: "flex",
           flexDirection: "column",
           width: "100%",
+          height: "100%",
+          justifyContent: "center",
         }}
       >
         <div
@@ -40,11 +33,17 @@ export default function HeroSection() {
             alignItems: "center",
             flexDirection: "column",
             width: "100%",
-            justifyContent: "space-around",
+            // justifyContent: "space-around",
+            marginTop: tamanhoTela > 768 ? "" : "-30%",
           }}
         >
           <div>
-            <Image className="HeroImage" src={eu} width={350} height={350} />
+            <Image
+              className="HeroImage"
+              src={eu}
+              width={tamanhoTela > 768 ? 350 : 200}
+              height={tamanhoTela > 768 ? 350 : 250}
+            />
           </div>
           <div
             id="slider"
@@ -54,7 +53,9 @@ export default function HeroSection() {
               alignItems: "center",
               justifyContent: "space-between",
               flexDirection: "column",
-              maxWidth: "700px",
+              maxWidth: tamanhoTela > 768 ? "750px" : "80%",
+              maxHeight: tamanhoTela > 768 ? "" : "300px",
+              height: tamanhoTela > 768 ? "" : "250px",
               background: "#fff",
               borderRadius: "20px",
               padding: "20px",
@@ -62,12 +63,8 @@ export default function HeroSection() {
               zIndex: "0",
             }}
           >
-            <h1
-              style={{
-                fontFamily: "Roboto",
-                fontSize: "34px",
-              }}
-            >
+            <Heading>
+              {" "}
               A{" "}
               <span
                 style={{
@@ -78,7 +75,15 @@ export default function HeroSection() {
               </span>{" "}
               é especialista em vendas e instalaçãos de redes de proteção para
               janelas, escadas, sacadas, quadras e outras áreas.
-            </h1>
+            </Heading>
+            {/* <h1
+              style={{
+                fontFamily: "Roboto",
+                lineHeight: "1.1",
+                fontWeight: "600",
+                fontSize: tamanhoTela > 768 ? "34px" : "20px",
+              }}
+            ></h1> */}
             {/* <ImageSlider slides={SliderData} /> */}
           </div>
         </div>
@@ -89,7 +94,7 @@ export default function HeroSection() {
             duration={700}
             spy={true}
             exact="true"
-            offset={width <= 768 ? 0 : -70}
+            offset={tamanhoTela <= 768 ? 0 : -70}
           >
             <Image
               className="arrow"

@@ -30,21 +30,10 @@ export default function InfoSection({
   imagem,
   nextPage,
 }) {
-  const [width, setWidth] = useState(769);
+  const [tamanhoTela, setTamanhoTela] = useState(0);
 
-  function initialState() {
-    const num = Math.max(
-      document.body.scrollWidth,
-      document.documentElement.scrollWidth,
-      document.body.offsetWidth,
-      document.documentElement.offsetWidth,
-      document.documentElement.clientWidth
-    );
-    return setWidth(num);
-  }
   useEffect(() => {
-    initialState();
-    console.log(topLine);
+    setTamanhoTela(window.screen.width);
   }, []);
 
   return (
@@ -54,7 +43,7 @@ export default function InfoSection({
           <InfoRow imgStart={imgStart}>
             <Parallax
               translateX={[-40, 40]}
-              disabled={width <= 768 ? true : false}
+              disabled={tamanhoTela <= 768 ? true : false}
             >
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
@@ -64,7 +53,7 @@ export default function InfoSection({
                   <Link
                     to={nextPage}
                     smooth={true}
-                    offset={width <= 768 ? 0 : -70}
+                    offset={tamanhoTela <= 768 ? 0 : -70}
                     duration={700}
                     spy={true}
                     exact="true"
@@ -83,10 +72,10 @@ export default function InfoSection({
             </Parallax>
             <Parallax
               translateX={[40, -40]}
-              disabled={width <= 768 ? true : false}
+              disabled={tamanhoTela <= 768 ? true : false}
             >
               <ImgWrap>
-                <Image width={600} height={500} src={imagem} alt={alt} />
+                <Image width={tamanhoTela >= 768 ? 600 : 300} height={tamanhoTela >= 768 ? 500 : 200} src={imagem} alt={alt} />
               </ImgWrap>
             </Parallax>
           </InfoRow>

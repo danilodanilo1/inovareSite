@@ -16,7 +16,7 @@ import janela5 from "../images/servicos/janelas/janela-5.jpeg";
 import janela6 from "../images/servicos/janelas/janela-6.jpeg";
 import arrowDown from "../images/arrowUp.svg";
 import arrowBlack from "../images/arrowblack.svg";
-import { InfoRow, InfoWrapper, InfoContainer, InfoRow2 } from "./infoElements";
+import { InfoRow, InfoWrapper, InfoContainer, InfoRow2, InfoContainer2 } from "./infoElements";
 
 import { Link } from "react-scroll";
 
@@ -25,22 +25,11 @@ import Image from "next/image";
 import { HeroBtnWrapper } from "../HeroSection/heroElements";
 
 export default function InfoSection({ id, lightBg, imgStart }) {
-  const [width, setWidth] = useState(769);
-  function initialState() {
-    const num = Math.max(
-      document.body.scrollWidth,
-      document.documentElement.scrollWidth,
-      document.body.offsetWidth,
-      document.documentElement.offsetWidth,
-      document.documentElement.clientWidth
-    );
-    return setWidth(num);
-  }
+  const [tamanhoTela, setTamanhoTela] = useState(0);
 
   useEffect(() => {
-    initialState();
+    setTamanhoTela(window.screen.width);
   }, []);
-
   const sacadas = [
     {
       image: sacada1,
@@ -104,24 +93,24 @@ export default function InfoSection({ id, lightBg, imgStart }) {
           alignItems: "center",
           justifyContent: "center",
           lineHeight: "0",
-          marginBottom: "10px",
+          marginBottom: tamanhoTela >= 768 ? "10px" : "0",
         }}
       >
-        <h1 style={{ color: "#d4aa00ff" }}>{titulo}</h1>
-        <h2 style={{ fontSize: "18px" }}>{frase}</h2>
+        <h1 style={{ color: "#d4aa00ff", fontSize: tamanhoTela >= 768 ? "18px" : "16px" }}>{titulo}</h1>
+        <h2 style={{ fontSize: tamanhoTela >= 768 ? "18px" : "14px"}}>{frase}</h2>
       </div>
       <div>
-        <ImageSlider slides={slider} />
+        <ImageSlider slides={slider} tamanhoTela={tamanhoTela} />
       </div>
     </div>
   );
 
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer2 lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow2 imgStart={imgStart}>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: tamanhoTela >= 768 ? "flex" : "block" }}>
               <Card
                 titulo={"Proteção para Sacadas."}
                 frase={"Proteção UV contra ressecamento."}
@@ -145,7 +134,7 @@ export default function InfoSection({ id, lightBg, imgStart }) {
                 duration={700}
                 spy={true}
                 exact="true"
-                offset={width <= 768 ? 0 : -70}
+                offset={tamanhoTela <= 768 ? 0 : -70}
               >
                 <Image
                   className="arrow"
@@ -158,7 +147,7 @@ export default function InfoSection({ id, lightBg, imgStart }) {
             </HeroBtnWrapper>
           </InfoRow2>
         </InfoWrapper>
-      </InfoContainer>
+      </InfoContainer2>
     </>
   );
 }

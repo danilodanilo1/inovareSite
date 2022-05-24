@@ -1,5 +1,5 @@
-import img2 from '../images/unsp/pretoebranco.jpg'
-import img3 from '../images/unsp/diagonal.jpg'
+import img2 from '../images/unsp/cityNoite.jpg'
+import img3 from '../images/unsp/pretoebranco.jpg'
 import img4 from '../images/unsp/redepreta.jpg'
 
 export const homeObjOne = {

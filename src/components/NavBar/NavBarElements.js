@@ -41,15 +41,21 @@ export const NavBarContainer = styled.div`
   max-width: 1100px;
   height: 119px;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    padding: 0px;
+  }
 `;
 
 export const FloatWhats = styled.div`
   position: fixed;
   width: 70px;
   height: 70px;
-  bottom: 50px;
-  right: 250px;
+  bottom: 10%;
+  right: 20%;
   z-index: 999;
+  @media screen and (max-width: 768px) {
+    right: 10%;
+  }
 `;
 export const Linkao = styled.a`
   width: 60px;
@@ -102,25 +108,23 @@ export const NavBarLogo = styled(LinkS)`
   display: flex;
   align-items: center;
   font-weight: bold;
+  padding: 10px;
   text-decoration: none;
   @media screen and (max-width: 768px) {
     opacity: 0.5;
   }
 `;
+
+export const NavMenuMobile = styled.div``;
 export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    opacity: 0.5;
-    padding-top: 3px;
-    color: #dad8d8;
+    color: #d4aa00ff;
     display: block;
-    position: absolute;
-    top: -15px;
-    right: 0;
-    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    margin-right: 7%;
   }
 `;
 export const NavMenu = styled.ul`

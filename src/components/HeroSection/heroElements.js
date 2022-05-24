@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
+  background: #000;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -137,6 +138,14 @@ export const HeroBtnWrapper = styled.div`
     100%{top:60px}
   }
   animation: animate 1s linear infinite alternate;
+  @media screen and (max-width: 768px) {
+    @keyframes animate{
+    0%{
+      top:0px
+    }
+    100%{top:20px}
+  }
+  }
   .arrowBlack {
     transform: rotate(180deg);
     width: 20px;
