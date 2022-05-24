@@ -99,6 +99,18 @@ export const TopLine = styled.p`
   @media screen and (max-width: 768px) {
     font-size: 12px;
   }
+  
+`;
+export const Heading2 = styled.h1`
+  margin-bottom: 2px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #010606;
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 export const Heading = styled.h1`
   margin-bottom: 2px;
@@ -109,7 +121,7 @@ export const Heading = styled.h1`
 
   @media screen and (max-width: 768px) {
     font-size: 28px;
-    color:#000;
+    /* color:#000; */
   }
 `;
 export const Subtitle = styled.p`

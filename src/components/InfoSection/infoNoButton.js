@@ -14,6 +14,7 @@ import {
   TopLine,
   InfoContainer,
   ImgWrap,
+  Heading2,
 } from "./infoElements";
 import Image from "next/image";
 

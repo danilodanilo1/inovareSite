@@ -55,7 +55,6 @@ export default function HeroSection() {
               flexDirection: "column",
               maxWidth: tamanhoTela > 768 ? "750px" : "80%",
               maxHeight: tamanhoTela > 768 ? "" : "300px",
-              height: tamanhoTela > 768 ? "" : "250px",
               background: "#fff",
               borderRadius: "20px",
               padding: "20px",
@@ -63,19 +62,26 @@ export default function HeroSection() {
               zIndex: "0",
             }}
           >
-            <Heading>
-              {" "}
-              A{" "}
-              <span
+          
+              <h1
                 style={{
-                  color: "#725c04",
+                  color: "#010606",
+                  fontSize: tamanhoTela >= 768 ? "" : "26.5px"
                 }}
               >
-                INOVARE REDES
-              </span>{" "}
-              é especialista em vendas e instalaçãos de redes de proteção para
-              janelas, escadas, sacadas, quadras e outras áreas.
-            </Heading>
+                {" "}
+                A{" "}
+                <span
+                  style={{
+                    color: "#725c04",
+                  }}
+                >
+                  INOVARE REDES
+                </span>{" "}
+                é especialista em vendas e instalaçãos de redes de proteção para
+                janelas, escadas, sacadas, quadras e outras áreas.
+              </h1>
+
             {/* <h1
               style={{
                 fontFamily: "Roboto",
