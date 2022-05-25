@@ -43,6 +43,7 @@ export default function HeroSection() {
               src={eu}
               width={tamanhoTela > 768 ? 350 : 200}
               height={tamanhoTela > 768 ? 350 : 250}
+              alt="logo inovare redes"
             />
           </div>
           <div
@@ -53,7 +54,7 @@ export default function HeroSection() {
               alignItems: "center",
               justifyContent: "space-between",
               flexDirection: "column",
-              maxWidth: tamanhoTela > 768 ? "750px" : "80%",
+              maxWidth: tamanhoTela > 768 ? "50%" : "80%",
               maxHeight: tamanhoTela > 768 ? "" : "300px",
               background: "#fff",
               borderRadius: "20px",
@@ -62,35 +63,24 @@ export default function HeroSection() {
               zIndex: "0",
             }}
           >
-          
-              <h1
+            <h1
+              style={{
+                color: "#010606",
+                fontSize: tamanhoTela >= 768 ? "" : "26.5px",
+              }}
+            >
+              {" "}
+              A{" "}
+              <span
                 style={{
-                  color: "#010606",
-                  fontSize: tamanhoTela >= 768 ? "" : "26.5px"
+                  color: "#725c04",
                 }}
               >
-                {" "}
-                A{" "}
-                <span
-                  style={{
-                    color: "#725c04",
-                  }}
-                >
-                  INOVARE REDES
-                </span>{" "}
-                é especialista em vendas e instalaçãos de redes de proteção para
-                janelas, escadas, sacadas, quadras e outras áreas.
-              </h1>
-
-            {/* <h1
-              style={{
-                fontFamily: "Roboto",
-                lineHeight: "1.1",
-                fontWeight: "600",
-                fontSize: tamanhoTela > 768 ? "34px" : "20px",
-              }}
-            ></h1> */}
-            {/* <ImageSlider slides={SliderData} /> */}
+                INOVARE REDES
+              </span>{" "}
+              é especialista em vendas e instalaçãos de redes de proteção para
+              janelas, escadas, sacadas, quadras e outras áreas.
+            </h1>
           </div>
         </div>
         <S.HeroBtnWrapper>
@@ -99,6 +89,7 @@ export default function HeroSection() {
             smooth={true}
             duration={700}
             spy={true}
+            href="/sobre"
             exact="true"
             offset={tamanhoTela <= 768 ? 0 : -70}
           >

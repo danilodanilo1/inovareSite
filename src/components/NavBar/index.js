@@ -43,12 +43,13 @@ export default function NavBar({ toggle }) {
     <>
       <Nav scrollNav={scrollNav}>
         <NavBarContainer>
-          <NavBarLogo to="/" onClick={toggleHome}>
+          <NavBarLogo to="/" href="/home" onClick={toggleHome}>
             <Image
               className="logoImg"
               src={logo}
               width={tamanhoTela >= 768 ? 65 : 50}
               height={tamanhoTela >= 768 ? 65 : 50}
+              alt="logo inovare redes"
             />
           </NavBarLogo>
           <>
@@ -59,6 +60,7 @@ export default function NavBar({ toggle }) {
               <NavItem>
                 <NavLinks
                   to="sobre"
+                  href="/sobre"
                   smooth={true}
                   duration={700}
                   spy={true}
@@ -72,6 +74,7 @@ export default function NavBar({ toggle }) {
                 <NavLinks
                   to="servicos"
                   smooth={true}
+                  href="/servicos"
                   duration={700}
                   spy={true}
                   exact="true"
@@ -83,6 +86,7 @@ export default function NavBar({ toggle }) {
               <NavItem>
                 <NavLinks
                   to="produtos"
+                  href="/produtos"
                   smooth={true}
                   duration={700}
                   spy={true}
@@ -99,6 +103,7 @@ export default function NavBar({ toggle }) {
                     smooth={true}
                     duration={700}
                     spy={true}
+                    href="/cadasstrar"
                     exact="true"
                     offset={-80}
                   >
@@ -113,6 +118,7 @@ export default function NavBar({ toggle }) {
                 className="whatsapp_float"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter"
               >
                 <i className="fa fa-whatsapp whatsapp-icon"> </i>
               </Linkao>

@@ -132,6 +132,7 @@ export default function InfoSection({ id, lightBg, imgStart }) {
                 to="cadastrar"
                 smooth={true}
                 duration={700}
+                href="/cadastrar"
                 spy={true}
                 exact="true"
                 offset={tamanhoTela <= 768 ? 0 : -70}

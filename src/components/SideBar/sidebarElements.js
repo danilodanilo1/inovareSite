@@ -37,7 +37,7 @@ export const SidebarWrapper = styled.div`
     justify-content: center;
     align-items: center;
 `;
-export const SidebarMenu = styled.ul`
+export const SidebarMenu = styled.div`
     display:flex;
     justify-content: center;
     align-items: center;

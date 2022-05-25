@@ -62,7 +62,7 @@ export const Linkao = styled.a`
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #25d366;
+  background-color: #34af23;
   color: #fff;
   border-radius: 50px;
   text-align: center;

@@ -53,6 +53,7 @@ export default function InfoSection({
                 <HeroBtnWrapper>
                   <Link
                     to={nextPage}
+                    href="/nextpage"
                     smooth={true}
                     offset={tamanhoTela <= 768 ? 0 : -70}
                     duration={700}

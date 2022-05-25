@@ -14,16 +14,16 @@ export default function Sidebar ({isOpen, toggle}) {
                 </Icon>
                 <SidebarWrapper>
                     <SidebarMenu>
-                        <SidebarLink to="sobre" onClick={toggle}>Sobre nós.</SidebarLink>
+                        <SidebarLink to="sobre" href="/sobre" onClick={toggle}>Sobre nós.</SidebarLink>
                     </SidebarMenu>
                     <SidebarMenu>
-                        <SidebarLink to="servicos" onClick={toggle}>Serviços.</SidebarLink>
+                        <SidebarLink to="servicos" href="/servicos" onClick={toggle}>Serviços.</SidebarLink>
                     </SidebarMenu>
                     <SidebarMenu>
-                        <SidebarLink to="produtos" onClick={toggle}>Galeria.</SidebarLink>
+                        <SidebarLink to="produtos" href="/produtos" onClick={toggle}>Galeria.</SidebarLink>
                     </SidebarMenu>
                     <SidebarMenu>
-                        <SidebarLink to="cadastrar" onClick={toggle}>Orçamento Grátis.</SidebarLink>
+                        <SidebarLink to="cadastrar" href="/cadastrar" onClick={toggle}>Orçamento Grátis.</SidebarLink>
                     </SidebarMenu>
                 </SidebarWrapper>
             </SidebarContainer>   

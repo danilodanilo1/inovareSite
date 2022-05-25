@@ -16,6 +16,7 @@ import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import Head from "next/head";
 import { FloatWhats, Linkao } from "../src/components/NavBar/NavBarElements";
+import { NextSeo } from "next-seo";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [tamanhoTela, setTamanhoTela] = useState(0);
@@ -34,22 +35,34 @@ export default function Home() {
   };
 
   return (
-    <>
+    <html lang="pt-BR">
       <div>
         <Head>
           <title>Inovare Redes</title>
           <meta
+            name="description"
+            content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser!"
+          />
+          <meta
+            property="og:title"
+            content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
+          />
+          <meta
+            property="og:description"
+            content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
+          />
+          <meta property="og:url" content="https://previa-inovare.netlify.app/" />
+          <meta property="og:type" content="website"></meta>
+          <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <meta
-            name="description"
-            content="Inovare Redes de proteção para sacadas, janelas, piscinas e onde mais você quiser!"
-          />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta
             name="google-site-verification"
             content="kMJ2VUUTMm2TdYmxpFy_DdCcanD4zkR_S4WW65TRj-U"
           />
+          {/* <link rel="shortcut icon" href="public/favicon.ico" /> */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -69,6 +82,7 @@ export default function Home() {
             className="whatsapp_float"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
             style={{
               width: "200px",
               height: "60px",
@@ -76,6 +90,7 @@ export default function Home() {
               padding: "0 20px",
               textDecoration: "none",
               fontWeight: "bold",
+              color: "#000",
             }}
           >
             {" "}
@@ -99,6 +114,6 @@ export default function Home() {
         <Contact {...homeObjFour} />
         <Footer />
       </AlertProvider>
-    </>
+    </html>
   );
 }
