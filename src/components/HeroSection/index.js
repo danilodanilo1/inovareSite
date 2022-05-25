@@ -17,7 +17,7 @@ export default function HeroSection() {
 
   return (
     <S.Wrapper>
-      <Image layout="fill" alt="rede" width={"100%"} height={"100%"} loading="lazy" src={Video} />
+      <Image layout="fill" alt="rede" loading="lazy" src={Video} />
       <div
         style={{
           display: "flex",
