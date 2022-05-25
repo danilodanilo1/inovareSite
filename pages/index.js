@@ -84,7 +84,7 @@ export default function Home() {
               whiteSpace: "nowrap",
               textDecoration: "none",
               fontWeight: "bold",
-              padding: "0 20px",
+              padding: tamanhoTela >= 768 ? "0 20px": "",
               color: "#000",
               gap: "5px",
             }}
@@ -94,8 +94,8 @@ export default function Home() {
             <Image
               src={logoWhats}
               loading="lazy"
-              width={tamanhoTela >= 768 ? 60 : "110%"}
-              height={tamanhoTela >= 768 ? 60 : "110%"}
+              width={tamanhoTela >= 768 ? 60 : ""}
+              height={tamanhoTela >= 768 ? 60 : ""}
               alt="logo inovare redes"
             />
           </Linkao>
