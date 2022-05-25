@@ -39,7 +39,7 @@ export default function HeroSection() {
         >
           <div>
             <Image
-              // className="HeroImage"
+              className="HeroImage"
               src={eu}
               loading="lazy"
               width={tamanhoTela > 768 ? 350 : 200}
@@ -95,7 +95,7 @@ export default function HeroSection() {
             offset={tamanhoTela <= 768 ? 0 : -70}
           >
             <Image
-              // className="arrow"
+              className="arrow"
               src={arrowDown}
               width={30}
               loading="lazy"

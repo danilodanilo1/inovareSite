@@ -6,7 +6,7 @@ export const ButtonN = styled.button`
     white-space:nowrap;
     padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
     color: '#010606';
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'sans-serif';
     font-weight: bold;
     font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
     outline:none;

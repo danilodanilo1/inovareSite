@@ -45,7 +45,7 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
                     height={tamanhoTela >= 768 ? "400px" : "150"}
                     style={{ borderRadius: "7px" }}
                     alt="travel image"
-                    // className="image"
+                    className="image"
                   />
                 )}
               </div>
@@ -53,7 +53,7 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
           })}
           <div>
             <FaArrowAltCircleLeft
-              // className="left-arrow"
+              className="left-arrow"
               onClick={prevSlide}
               style={{
                 margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
@@ -61,7 +61,7 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
               }}
             />
             <FaArrowAltCircleRight
-              // className="right-arrow"
+              className="right-arrow"
               onClick={nextSlide}
               style={{
                 margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
@@ -73,7 +73,7 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
       ) : (
         <>
           <FaArrowAltCircleLeft
-            // className="left-arrow"
+            className="left-arrow"
             onClick={prevSlide}
             style={{
               margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
@@ -94,7 +94,7 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
                     height={tamanhoTela >= 768 ? "400px" : "150"}
                     style={{ borderRadius: "7px" }}
                     alt="travel image"
-                    // className="image"
+                    className="image"
                   />
                 )}
               </div>
@@ -102,7 +102,7 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
           })}
           <div>
             <FaArrowAltCircleRight
-              // className="right-arrow"
+              className="right-arrow"
               onClick={nextSlide}
               style={{
                 margin: tamanhoTela >= 768 ? "20px" : "0px 10px",

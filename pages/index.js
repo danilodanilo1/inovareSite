@@ -84,6 +84,7 @@ export default function Home() {
               whiteSpace: "nowrap",
               textDecoration: "none",
               fontWeight: "bold",
+              padding: "0 20px",
               color: "#000",
               gap: "5px",
             }}

@@ -39,12 +39,12 @@ export const HeroContainer = styled.div`
     z-index: 2;
   }
   .arrow {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     width: 20px;
     cursor: pointer;
   }
   .arrowBlack {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     width: 20px;
     cursor: pointer;
   }
@@ -115,12 +115,12 @@ export const HeroP = styled.p`
   }
 `;
 export const Arrow = styled.img`
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   width: 20px;
   cursor: pointer;
 `;
 export const ArrowBlack = styled.img`
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   width: 20px;
   cursor: pointer;
 `;
@@ -147,12 +147,12 @@ export const HeroBtnWrapper = styled.div`
   }
   }
   .arrowBlack {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     width: 20px;
     cursor: pointer;
   }
   .arrow {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     width: 20px;
     cursor: pointer;
   }

@@ -137,7 +137,7 @@ export default function InfoSection({ id, lightBg, imgStart }) {
                 offset={tamanhoTela <= 768 ? 0 : -70}
               >
                 <Image
-                  // className="arrow"
+                  className="arrow"
                   src={arrowDown}
                   width={30}
                   height={30}

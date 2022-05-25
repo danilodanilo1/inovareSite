@@ -45,7 +45,7 @@ export default function NavBar({ toggle }) {
         <NavBarContainer>
           <NavBarLogo to="/" href="/home" onClick={toggleHome}>
             <Image
-              // className="logoImg"
+              className="logoImg"
               src={logo}
               loading="lazy"
               width={tamanhoTela >= 768 ? 65 : 50}
@@ -121,7 +121,7 @@ export default function NavBar({ toggle }) {
                 aria-label="Twitter"
               >
                 <Image
-                  // className="logoImg"
+                  className="logoImg"
                   src={logoWhats}
                   width={40}
                   loading="lazy"

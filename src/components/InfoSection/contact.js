@@ -1,38 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ButtonN } from "../ButtonElement";
 import { useAlert } from "react-alert";
 import * as emailjs from "emailjs-com";
-import { Parallax } from "react-scroll-parallax";
-import { HeroBtnWrapper } from "../HeroSection/heroElements";
-import arrowBlack from "../images/arrowblack.svg";
-import { Link } from "react-scroll";
+
 import {
   BtnWrap,
-  Column1,
   Heading,
   InfoRow,
   InfoWrapper,
   TextWrapper,
   TopLine,
   InfoContainer,
-  Column2,
-  ImgWrap,
-  Img,
   Input,
   TextArea,
 } from "./infoElements";
-import Image from "next/image";
 
 export default function InfoSection({
   id,
   lightBg,
   lightText,
-  topLine,
-  headline,
-  buttonLabel,
   imgStart,
-  alt,
-  imagem,
 }) {
   const alert = useAlert();
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { HeroBtnWrapper } from "../HeroSection/heroElements";
 import arrowDown from "../images/arrowUp.svg";
-import arrowBlack from "../images/arrowblack.svg";
+import arrowBlack from "../images/arrowUp.svg";
 import { Parallax } from "react-scroll-parallax";
 
 import {
@@ -14,7 +14,6 @@ import {
   TopLine,
   InfoContainer,
   ImgWrap,
-  Heading2,
 } from "./infoElements";
 import Image from "next/image";
 
@@ -61,7 +60,7 @@ export default function InfoSection({
                     exact="true"
                   >
                     <Image
-                      // className="arrow"
+                      className="arrow"
                       primary={"true"}
                       width={30}
                       height={30}
