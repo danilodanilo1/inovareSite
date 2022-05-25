@@ -17,6 +17,7 @@ import {
 import { FaBars } from "react-icons/fa";
 import logo from "../images/img/triangulosemnome.svg";
 import Image from "next/image";
+import logoWhats from "../images/img/logowhats.svg";
 
 export default function NavBar({ toggle }) {
   const [scrollNav, setScrollNav] = useState(false);
@@ -33,7 +34,6 @@ export default function NavBar({ toggle }) {
     window.addEventListener("scroll", changeNav);
     setTamanhoTela(window.screen.width);
   }, []);
-  console.log(tamanhoTela);
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -45,8 +45,9 @@ export default function NavBar({ toggle }) {
         <NavBarContainer>
           <NavBarLogo to="/" href="/home" onClick={toggleHome}>
             <Image
-              className="logoImg"
+              // className="logoImg"
               src={logo}
+              loading="lazy"
               width={tamanhoTela >= 768 ? 65 : 50}
               height={tamanhoTela >= 768 ? 65 : 50}
               alt="logo inovare redes"
@@ -115,12 +116,18 @@ export default function NavBar({ toggle }) {
             {tamanhoTela >= 768 && (
               <Linkao
                 href="https://wa.me/5511952688682"
-                className="whatsapp_float"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
               >
-                <i className="fa fa-whatsapp whatsapp-icon"> </i>
+                <Image
+                  // className="logoImg"
+                  src={logoWhats}
+                  width={40}
+                  loading="lazy"
+                  height={40}
+                  alt="logo inovare redes"
+                />
               </Linkao>
             )}
           </>

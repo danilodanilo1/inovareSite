@@ -17,7 +17,7 @@ export default function HeroSection() {
 
   return (
     <S.Wrapper>
-      <Image layout="fill" alt="rede" src={Video} />
+      <Image layout="fill" alt="rede" width={"100%"} height={"100%"} loading="lazy" src={Video} />
       <div
         style={{
           display: "flex",
@@ -39,8 +39,9 @@ export default function HeroSection() {
         >
           <div>
             <Image
-              className="HeroImage"
+              // className="HeroImage"
               src={eu}
+              loading="lazy"
               width={tamanhoTela > 768 ? 350 : 200}
               height={tamanhoTela > 768 ? 350 : 250}
               alt="logo inovare redes"
@@ -94,9 +95,10 @@ export default function HeroSection() {
             offset={tamanhoTela <= 768 ? 0 : -70}
           >
             <Image
-              className="arrow"
+              // className="arrow"
               src={arrowDown}
               width={30}
+              loading="lazy"
               height={30}
               alt="scroll-down"
             />

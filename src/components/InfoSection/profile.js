@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
-import sacada1 from "../images/servicos/sacadas/sacada-3.jpeg";
-import sacada2 from "../images/servicos/sacadas/sacada-4.jpeg";
-import sacada3 from "../images/servicos/sacadas/sacada-5.jpeg";
-import sacada4 from "../images/servicos/sacadas/sacada-6.jpeg";
-import pet1 from "../images/servicos/pets/pet-1.jpg";
-import pet6 from "../images/servicos/pets/pet-6.jpg";
-import pet5 from "../images/servicos/pets/pet-7.jpg";
-import pet2 from "../images/servicos/pets/pet-2.jpeg";
-import pet3 from "../images/servicos/pets/pet-3.jpeg";
-import janela1 from "../images/servicos/janelas/janela-1.jpeg";
-import janela2 from "../images/servicos/janelas/janela-2.jpeg";
-import janela3 from "../images/servicos/janelas/janela-3.jpeg";
-import janela4 from "../images/servicos/janelas/janela-4.jpeg";
-import janela5 from "../images/servicos/janelas/janela-5.jpeg";
-import janela6 from "../images/servicos/janelas/janela-6.jpeg";
+import sacada1 from "../images/servicos/sacadas/sacada-3.webp";
+import sacada2 from "../images/servicos/sacadas/sacada-4.webp";
+import sacada3 from "../images/servicos/sacadas/sacada-5.webp";
+import sacada4 from "../images/servicos/sacadas/sacada-6.webp";
+import pet1 from "../images/servicos/pets/pet-1.webp";
+import pet6 from "../images/servicos/pets/pet-6.webp";
+import pet5 from "../images/servicos/pets/pet-7.webp";
+import pet2 from "../images/servicos/pets/pet-2.webp";
+import pet3 from "../images/servicos/pets/pet-3.webp";
+import janela1 from "../images/servicos/janelas/janela-1.webp";
+import janela2 from "../images/servicos/janelas/janela-2.webp";
+import janela3 from "../images/servicos/janelas/janela-3.webp";
+import janela4 from "../images/servicos/janelas/janela-4.webp";
+import janela5 from "../images/servicos/janelas/janela-5.webp";
+import janela6 from "../images/servicos/janelas/janela-6.webp";
 import arrowDown from "../images/arrowUp.svg";
-import arrowBlack from "../images/arrowblack.svg";
-import { InfoRow, InfoWrapper, InfoContainer, InfoRow2, InfoContainer2 } from "./infoElements";
+import { InfoWrapper,InfoRow2, InfoContainer2 } from "./infoElements";
 
 import { Link } from "react-scroll";
 
@@ -138,10 +137,11 @@ export default function InfoSection({ id, lightBg, imgStart }) {
                 offset={tamanhoTela <= 768 ? 0 : -70}
               >
                 <Image
-                  className="arrow"
+                  // className="arrow"
                   src={arrowDown}
                   width={30}
                   height={30}
+                  loading="lazy"
                   alt="scroll-down"
                 />
               </Link>

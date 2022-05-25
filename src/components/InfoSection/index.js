@@ -63,7 +63,7 @@ export default function InfoSection ({
                     </Column1>
                     <Column2>
                     <ImgWrap>
-                        <Image src={imagem} alt={alt} />
+                        <Image src={imagem} alt={alt} loading="lazy" />
                     </ImgWrap>
                     </Column2>
                 </InfoRow>

@@ -58,8 +58,8 @@ export const FloatWhats = styled.div`
   }
 `;
 export const Linkao = styled.a`
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   bottom: 40px;
   right: 40px;
   background-color: #34af23;
@@ -69,6 +69,19 @@ export const Linkao = styled.a`
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animationWhats 300ms ease infinite alternate;
+
+  @keyframes animationWhats {
+    0% {
+      transform: scale(1)
+    }
+    100% {
+      transform: scale(1.1)
+    }
+  }
 
   i {
     margin-top: 16px;

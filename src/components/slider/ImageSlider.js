@@ -26,40 +26,92 @@ const ImageSlider = ({ slides, tamanhoTela }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: tamanhoTela >= 768 ? "column": "row",
+        flexDirection: tamanhoTela >= 768 ? "column" : "row",
       }}
     >
-        <FaArrowAltCircleLeft
-          className="left-arrow"
-          onClick={prevSlide}
-          style={{ margin: tamanhoTela >= 768 ? "20px":"0px 10px", cursor: "pointer" }}
-        />
-      {slides?.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <Image
-                src={slide.image}
-                width={tamanhoTela >= 768 ? "500px" : "200"}
-                height={tamanhoTela >= 768 ? "400px" : "150"}
-                style={{ borderRadius: "7px" }}
-                alt="travel image"
-                className="image"
-              />
-            )}
+      {tamanhoTela >= 768 ? (
+        <>
+          {slides?.map((slide, index) => {
+            return (
+              <div
+                className={index === current ? "slide active" : "slide"}
+                key={index}
+              >
+                {index === current && (
+                  <Image
+                    src={slide.image}
+                    loading="lazy"
+                    width={tamanhoTela >= 768 ? "500px" : "200"}
+                    height={tamanhoTela >= 768 ? "400px" : "150"}
+                    style={{ borderRadius: "7px" }}
+                    alt="travel image"
+                    // className="image"
+                  />
+                )}
+              </div>
+            );
+          })}
+          <div>
+            <FaArrowAltCircleLeft
+              // className="left-arrow"
+              onClick={prevSlide}
+              style={{
+                margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
+                cursor: "pointer",
+              }}
+            />
+            <FaArrowAltCircleRight
+              // className="right-arrow"
+              onClick={nextSlide}
+              style={{
+                margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
+                cursor: "pointer",
+              }}
+            />
           </div>
-        );
-      })}
-      <div>
-        <FaArrowAltCircleRight
-          className="right-arrow"
-          onClick={nextSlide}
-          style={{ margin:tamanhoTela >= 768 ? "20px":"0px 10px", cursor: "pointer" }}
-        />
-      </div>
+        </>
+      ) : (
+        <>
+          <FaArrowAltCircleLeft
+            // className="left-arrow"
+            onClick={prevSlide}
+            style={{
+              margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
+              cursor: "pointer",
+            }}
+          />
+          {slides?.map((slide, index) => {
+            return (
+              <div
+                className={index === current ? "slide active" : "slide"}
+                key={index}
+              >
+                {index === current && (
+                  <Image
+                    src={slide.image}
+                    loading="lazy"
+                    width={tamanhoTela >= 768 ? "500px" : "200"}
+                    height={tamanhoTela >= 768 ? "400px" : "150"}
+                    style={{ borderRadius: "7px" }}
+                    alt="travel image"
+                    // className="image"
+                  />
+                )}
+              </div>
+            );
+          })}
+          <div>
+            <FaArrowAltCircleRight
+              // className="right-arrow"
+              onClick={nextSlide}
+              style={{
+                margin: tamanhoTela >= 768 ? "20px" : "0px 10px",
+                cursor: "pointer",
+              }}
+            />
+          </div>
+        </>
+      )}
     </section>
   );
 };

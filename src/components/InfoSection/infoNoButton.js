@@ -61,10 +61,11 @@ export default function InfoSection({
                     exact="true"
                   >
                     <Image
-                      className="arrow"
-                      primary={'true'}
+                      // className="arrow"
+                      primary={"true"}
                       width={30}
                       height={30}
+                      loading="lazy"
                       src={lightBg ? arrowBlack : arrowDown}
                       alt="scroll-down"
                     />
@@ -77,7 +78,13 @@ export default function InfoSection({
               disabled={tamanhoTela <= 768 ? true : false}
             >
               <ImgWrap>
-                <Image width={tamanhoTela >= 768 ? 600 : 300} height={tamanhoTela >= 768 ? 500 : 200} src={imagem} alt={alt} />
+                <Image
+                  width={tamanhoTela >= 768 ? 500 : 300}
+                  height={tamanhoTela >= 768 ? 500 : 200}
+                  src={imagem}
+                  loading="lazy"
+                  alt={alt}
+                />
               </ImgWrap>
             </Parallax>
           </InfoRow>

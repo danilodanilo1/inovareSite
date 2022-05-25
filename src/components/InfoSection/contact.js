@@ -73,7 +73,6 @@ export default function InfoSection({
       .catch(() => {
         alert.error("Oops, Deu erro!");
       });
-    console.log(msg);
 
     setMsg({
       name: "",
@@ -82,11 +81,6 @@ export default function InfoSection({
       message: "",
     });
   };
-  const [tamanhoTela, setTamanhoTela] = useState(0);
-
-  useEffect(() => {
-    setTamanhoTela(window.screen.width);
-  }, []);
 
   return (
     <>
@@ -98,7 +92,7 @@ export default function InfoSection({
               <Heading lightText={lightText}>
                 Entramos em contato com você!
               </Heading>
-              <form className="form" onSubmit={(e) => handleSendMsg(e)}>
+              <form className="formulario" onSubmit={(e) => handleSendMsg(e)}>
                 <Input
                   name="name"
                   type="text"
