@@ -2,11 +2,9 @@ import React from "react";
 import {
   A,
   FooterContainer,
-  FooterLinksContainer,
   FooterWrap,
-  FooterLinksWrapper,
-  FooterLinkItems,
   Assignature,
+  Contato,
 } from "./footerElements";
 import lin from "../images/img/in.svg";
 import Image from "next/image";
@@ -14,12 +12,16 @@ export default function Footer() {
   return (
     <FooterContainer>
       <FooterWrap>
+        <Contato>
+          <p>Contato: (11) 9 5268-8682</p>
+          <p>Endereço: Rua Domingos vieira n.50</p>
+          <p>Aceitamos todos os cartões de débito, crédito e pix.</p>
+        </Contato>
         <A href="https://linkedin.com/in/danilonas" target="_blank">
-          <Image src={lin} alt="linkedin" loading="lazy" />
+          <Assignature>
+            All Rigths Reserved Nascoliver® (Danilo Nascimento)
+          </Assignature>
         </A>
-        <Assignature>
-          All Rigths Reserved Nascoliver® (Danilo Nascimento)
-        </Assignature>
       </FooterWrap>
     </FooterContainer>
   );
