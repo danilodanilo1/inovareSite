@@ -6,8 +6,6 @@ import {
   Assignature,
   Contato,
 } from "./footerElements";
-import lin from "../images/img/in.svg";
-import Image from "next/image";
 export default function Footer() {
   return (
     <FooterContainer>

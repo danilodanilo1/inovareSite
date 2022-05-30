@@ -75,8 +75,8 @@ export default function InfoSection({
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <TextWrapper>
-              <TopLine>Mande uma mensagem!</TopLine>
-              <Heading lightText={lightText}>
+              <TopLine lightText={true}>Mande uma mensagem!</TopLine>
+              <Heading lightText={true}>
                 Entramos em contato com você!
               </Heading>
               <form className="formulario" onSubmit={(e) => handleSendMsg(e)}>

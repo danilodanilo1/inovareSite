@@ -89,7 +89,7 @@ export const TextWrapper = styled.div`
   }
 `;
 export const TopLine = styled.p`
-  color: #836900;
+  color: ${({ lightText }) => (lightText ? "#010606" : "yellow")};
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;

@@ -29,6 +29,7 @@ export default function InfoSection({
   darkText,
   imagem,
   nextPage,
+  description2
 }) {
   const [tamanhoTela, setTamanhoTela] = useState(0);
 
@@ -41,14 +42,15 @@ export default function InfoSection({
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
-            <Parallax
+            {/* <Parallax
               translateX={[-40, 40]}
               disabled={tamanhoTela <= 768 ? true : false}
-            >
+            > */}
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
+                <TopLine lightText={lightText}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
+                <Subtitle darkText={darkText}>{description2}</Subtitle>
                 <HeroBtnWrapper>
                   <Link
                     to={nextPage}
@@ -71,7 +73,7 @@ export default function InfoSection({
                   </Link>
                 </HeroBtnWrapper>
               </TextWrapper>
-            </Parallax>
+            {/* </Parallax> */}
             <Parallax
               translateX={[40, -40]}
               disabled={tamanhoTela <= 768 ? true : false}

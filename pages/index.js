@@ -69,6 +69,10 @@ export default function Home() {
               name="google-site-verification"
               content="kMJ2VUUTMm2TdYmxpFy_DdCcanD4zkR_S4WW65TRj-U"
             />
+            <meta property="og:site_name" content="Inovare redes de Proteção"/>
+            <meta property="og:image" itemprop="image" content="triangulosemnome.svg"/>
+            <meta property="og:type" content="website" />
+            <meta property="og:updated_time" content="1440432930" />
           {/* </html> */}
         </Head>
       </div>
@@ -90,7 +94,7 @@ export default function Home() {
             }}
           >
             {" "}
-            {tamanhoTela >= 768 ? "11-952688682" : ""}
+            {tamanhoTela >= 768 ? "(11)9 5268-8682" : ""}
             <Image
               src={logoWhats}
               loading="lazy"

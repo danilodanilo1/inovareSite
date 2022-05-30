@@ -52,7 +52,7 @@ export default function HeroSection() {
             style={{
               zIndex: "1",
               display: "flex",
-              alignItems: "center",
+              alignItems: "flex-start",
               justifyContent: "space-between",
               flexDirection: "column",
               maxWidth: tamanhoTela > 768 ? "50%" : "80%",
@@ -64,22 +64,28 @@ export default function HeroSection() {
               zIndex: "0",
             }}
           >
-            <h1
-              style={{
-                color: "#010606",
-                fontSize: tamanhoTela >= 768 ? "" : "26.5px",
-              }}
-            >
-              {" "}
-              A{" "}
-              <span
+          <h2>
+          <span
                 style={{
                   color: "#725c04",
                 }}
               >
-                INOVARE REDES
+                A INOVARE REDES DE PROTEÇÃO
               </span>{" "}
-              é especialista em vendas e instalaçãos de redes de proteção para
+          </h2>
+            <h1
+              style={{
+                color: "#010606",
+                fontSize: tamanhoTela >= 768 ? "48px" : "26.5px",
+                margin: "0px",
+                lineHeight: "1.1",
+                fontWeight: "600",
+              }}
+            >
+              {" "}
+              
+             
+              É especialista em venda e instalação de redes de proteção para
               janelas, escadas, sacadas, quadras e outras áreas.
             </h1>
           </div>
