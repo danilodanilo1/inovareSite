@@ -41,39 +41,41 @@ export default function Home() {
     <>
       <div>
         <Head>
-          {/* <html lang="pt-BR"/> */}
-            <title>Inovare Redes</title>
-            <meta
-              name="description"
-              content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser!"
-            />
-            <meta
-              property="og:title"
-              content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
-            />
-            <meta
-              property="og:description"
-              content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
-            />
-            <meta
-              property="og:url"
-              content="https://previa-inovare.netlify.app/"
-            />
-            <meta property="og:type" content="website"></meta>
-            <meta
-              name="viewport"
-              content="initial-scale=1.0, width=device-width"
-            />
-            <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-            <meta
-              name="google-site-verification"
-              content="kMJ2VUUTMm2TdYmxpFy_DdCcanD4zkR_S4WW65TRj-U"
-            />
-            <meta property="og:site_name" content="Inovare redes de Proteção"/>
-            <meta property="og:image" itemprop="image" content="triangulosemnome.svg"/>
-            <meta property="og:type" content="website" />
-            <meta property="og:updated_time" content="1440432930" />
-          {/* </html> */}
+          <title>Inovare Redes</title>
+          <meta
+            name="description"
+            content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser!"
+          />
+          <meta
+            property="og:title"
+            content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
+          />
+          <meta
+            property="og:description"
+            content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
+          />
+          <meta
+            property="og:url"
+            content="https://www.inovareredesdeprotecao.com.br/"
+          />
+          <meta property="og:type" content="website"></meta>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta
+            name="google-site-verification"
+            content="kMJ2VUUTMm2TdYmxpFy_DdCcanD4zkR_S4WW65TRj-U"
+          />
+          <meta property="og:site_name" content="Inovare redes de Proteção" />
+          <meta
+            property="og:image"
+            itemprop="image"
+            content="triangulosemnome.svg"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:updated_time" content="1440432930" />
         </Head>
       </div>
       <AlertProvider template={AlertTemplate} {...options}>
@@ -88,7 +90,7 @@ export default function Home() {
               whiteSpace: "nowrap",
               textDecoration: "none",
               fontWeight: "bold",
-              padding: tamanhoTela >= 768 ? "0 20px": "",
+              padding: tamanhoTela >= 768 ? "0 20px" : "",
               color: "#000",
               gap: "5px",
             }}
