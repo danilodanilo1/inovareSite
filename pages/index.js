@@ -71,7 +71,7 @@ export default function Home() {
           <meta property="og:site_name" content="Inovare redes de Proteção" />
           <meta
             property="og:image"
-            itemprop="image"
+            itemProp="image"
             content="triangulosemnome.svg"
           />
           <meta property="og:type" content="website" />
