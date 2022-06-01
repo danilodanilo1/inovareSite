@@ -71,11 +71,10 @@ export default function Home() {
           <meta property="og:site_name" content="Inovare redes de Proteção" />
           <meta
             property="og:image"
-            itemProp="image"
-            content="triangulosemnome.svg"
+            content="https://inovareredesdeprotecao.com.br/src/components/images/logoInovare.svg"
           />
           <meta property="og:type" content="website" />
-          <meta property="og:updated_time" content="1440432930" />
+          
         </Head>
       </div>
       <AlertProvider template={AlertTemplate} {...options}>
