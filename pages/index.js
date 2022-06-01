@@ -74,7 +74,15 @@ export default function Home() {
             content="https://inovareredesdeprotecao.com.br/src/components/images/img/logoInovare.svg"
           />
           <meta property="og:type" content="website" />
-          
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-229986521-2"
+          ></script>
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'UA-229986521-2');
+          </script>
         </Head>
       </div>
       <AlertProvider template={AlertTemplate} {...options}>
