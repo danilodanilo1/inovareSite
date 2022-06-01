@@ -44,15 +44,15 @@ export default function Home() {
           <title>Inovare Redes</title>
           <meta
             name="description"
-            content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser!"
+            content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser! (11)9 5268-8682 orçamento grátis."
           />
           <meta
             property="og:title"
-            content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
+            content="Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser!"
           />
           <meta
             property="og:description"
-            content="Redes de proteção e telas para proteção para sacadas, janelas, piscinas, escadas"
+            content="INOVARE - (11)9 5268-8682 orçamento grátis."
           />
           <meta
             property="og:url"
@@ -71,7 +71,7 @@ export default function Home() {
           <meta property="og:site_name" content="Inovare redes de Proteção" />
           <meta
             property="og:image"
-            content="https://inovareredesdeprotecao.com.br/src/components/images/logoInovare.svg"
+            content="https://inovareredesdeprotecao.com.br/src/components/images/img/logoInovare.svg"
           />
           <meta property="og:type" content="website" />
           
