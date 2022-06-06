@@ -102,6 +102,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           ></iframe>
         </noscript>
       </Script>
+              {/* <!-- Global site tag (gtag.js) - Google Ads: 344000994 --> */}
+<Script async src="https://www.googletagmanager.com/gtag/js?id=AW-344000994"></Script>
+<Script>
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-344000994');`}
+</Script>
       <AlertProvider template={AlertTemplate} {...options}>
         <FloatWhats>
           <Linkao
