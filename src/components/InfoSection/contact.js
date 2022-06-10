@@ -18,7 +18,6 @@ import {
 export default function InfoSection({
   id,
   lightBg,
-  lightText,
   imgStart,
 }) {
   const alert = useAlert();
