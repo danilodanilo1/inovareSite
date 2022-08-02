@@ -4,16 +4,19 @@ export const InfoContainer = styled.div`
   .cv {
     visibility: hidden;
   }
+  display: flex;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
-
   @media screen and (max-width: 768px) {
     padding-top: 80px;
   }
 `;
 export const InfoContainer2 = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
   .cv {
     visibility: hidden;
   }
@@ -29,7 +32,7 @@ export const InfoContainer2 = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 930px;
+  /* height: 930px; */
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

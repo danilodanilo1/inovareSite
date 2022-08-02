@@ -156,11 +156,11 @@ export const NavItem = styled.li`
   height: 80px;
   display: flex;
   align-items: center;
-  color: #000;
+  color: ${({cor})=> cor ? cor : "#000"};
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #000;
+  color: ${({cor})=> cor ? cor : "#000"};
   display: flex;
   align-items: center;
   text-decoration: none;

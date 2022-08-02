@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Video from "../images/unsp/diagonal.jpg";
 import * as S from "./heroElements";
-import eu from "../images/img/logoPintado.svg";
+import Logo from "../images/img/logoPintado.svg";
 import arrowDown from "../images/arrowUp.svg";
 import Image from "next/image";
 import { Link } from "react-scroll";
-import { Linkao } from "../NavBar/NavBarElements";
-import { Heading, TopLine } from "../InfoSection/infoElements";
+
 
 export default function HeroSection() {
   const [tamanhoTela, setTamanhoTela] = useState(0);
@@ -17,7 +16,7 @@ export default function HeroSection() {
 
   return (
     <S.Wrapper>
-      <Image layout="fill" alt="rede" loading="lazy" src={Video} />
+      <Image layout="fill" alt="rede" loading="lazy"  src={Video} />
       <div
         style={{
           display: "flex",
@@ -37,16 +36,19 @@ export default function HeroSection() {
             marginTop: tamanhoTela > 768 ? "" : "-30%",
           }}
         >
-          <div>
+          {/* <div style={{opacity:"1"}}> 
             <Image
               className="HeroImage"
-              src={eu}
+              src={Logo}
               loading="lazy"
               width={tamanhoTela > 768 ? 350 : 200}
               height={tamanhoTela > 768 ? 350 : 250}
               alt="logo inovare redes"
+              layout='fill'
+              objectFit='contain'
+              
             />
-          </div>
+          </div> */}
           <div
             id="slider"
             style={{

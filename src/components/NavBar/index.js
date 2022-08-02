@@ -115,7 +115,7 @@ export default function NavBar({ toggle }) {
             </NavMenu>
             {tamanhoTela >= 768 && (
               <Linkao
-                href="https://wa.me/5511952688682"
+                href="https://wa.me/5511954971933"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"

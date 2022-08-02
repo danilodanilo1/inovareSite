@@ -64,12 +64,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <title>Inovare Redes</title>
         <meta
           name="description"
-          content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser! (11)9 5268-8682 orçamento grátis."
+          content="Inovare Redes de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser! (11)9 5497-1933 orçamento grátis."
         />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1018671206292795"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <meta
           property="og:title"
@@ -77,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         <meta
           property="og:description"
-          content="Preço de tela de proteção? (11)9 5268-8682 orçamento grátis."
+          content="Preço de tela de proteção? (11)9 5497-1933 orçamento grátis."
         />
         <meta
           property="og:url"
@@ -114,7 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <AlertProvider template={AlertTemplate} {...options}>
         <FloatWhats>
           <Linkao
-            href="https://wa.me/5511952688682"
+            href="https://wa.me/5511954971933"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
@@ -129,7 +129,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           >
             {" "}
-            {tamanhoTela >= 768 ? "(11)9 5268-8682" : ""}
+            {tamanhoTela >= 768 ? "(11)9 5497-1933" : ""}
             <Image
               src={logoWhats}
               loading="lazy"
