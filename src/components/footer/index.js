@@ -55,7 +55,6 @@ export default function Footer() {
                 <span></span>Siga-nos no Instagram
               </p>
             </a>
-            <p>CNPJ: 45.612.834/0001-96</p>
             <h1>Aceitamos todos os cartões de débito, crédito e pix.</h1>
           </div>
         </div>

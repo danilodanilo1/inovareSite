@@ -10,12 +10,10 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
-  LogoImg,
   Linkao,
-  NavMenuMobile,
 } from "./NavBarElements";
 import { FaBars } from "react-icons/fa";
-import logo from "../images/img/triangulosemnome.svg";
+import logo from "../images/img/logoPintado.svg";
 import Image from "next/image";
 import logoWhats from "../images/img/logowhats.svg";
 
@@ -42,14 +40,14 @@ export default function NavBar({ toggle }) {
   return (
     <>
       <Nav scrollNav={scrollNav}>
-        <NavBarContainer>
+        <NavBarContainer tamanhoTela={tamanhoTela}>
           <NavBarLogo to="/" href="/home" onClick={toggleHome}>
             <Image
               className="logoImg"
               src={logo}
               loading="lazy"
-              width={tamanhoTela >= 768 ? 65 : 50}
-              height={tamanhoTela >= 768 ? 65 : 50}
+              width={tamanhoTela >= 768 ? 100 : 80}
+              height={tamanhoTela >= 768 ? 80 : 80}
               alt="logo inovare redes"
             />
           </NavBarLogo>

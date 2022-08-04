@@ -41,6 +41,7 @@ export const NavBarContainer = styled.div`
   max-width: 1100px;
   height: 119px;
   align-items: center;
+  margin-left: ${(tamanhoTela)=> tamanhoTela > 768 ? '0' : '20px'};
   @media screen and (max-width: 768px) {
     padding: 0px;
   }
@@ -121,11 +122,12 @@ export const NavBarLogo = styled(LinkS)`
   display: flex;
   align-items: center;
   font-weight: bold;
-  padding: 10px;
   text-decoration: none;
   @media screen and (max-width: 768px) {
     opacity: 0.5;
   }
+
+  
 `;
 
 export const NavMenuMobile = styled.div``;
@@ -144,9 +146,8 @@ export const NavMenu = styled.ul`
   display: flex;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
   align-items: baseline;
-
+  padding: 0;
   @media screen and (max-width: 768px) {
     display: none;
   }

@@ -1,5 +1,5 @@
 import img2 from "../images/unsp/cityNoite.jpg";
-import img3 from "../images/unsp/pretoebranco.jpg";
+import img3 from "../images/img/cat.png";
 import img4 from "../images/unsp/redepreta.jpg";
 
 export const homeObjOne = {
@@ -31,7 +31,7 @@ export const homeObjTwo = {
   description2: `Nossas redes tem garantia de 5 anos, e são resistentes a até 500KG por m² e com proteção UH contra ressecamento.`,
 
   imgStart: true,
-  imagem: img2,
+  imagem: img4,
   alt: "image2",
   dark: false,
   primary: "false",
