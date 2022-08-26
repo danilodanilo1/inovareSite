@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  A,
   FooterContainer,
-  FooterWrap,
-  Assignature,
-  Contato,
   Center,
 } from "./footerElements";
 import Logo from "../images/img/logoSemNomeInovare.svg";
