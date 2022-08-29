@@ -40,97 +40,28 @@ export default function Home() {
 
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
 
-      <Script strategy="lazyOnload">
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-        page_path: window.location.pathname,
-        });
-    `}
-      </Script>
       <Head>
         <title>Inovare Redes</title>
-        {/* <!-- Google Tag Manager --> */}
-        <Script>
-          {
-            "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBRMKKR');"
-          }
-        </Script>
-        {/* <!-- End Google Tag Manager --> */}
+        <Script strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WBRMKKR');`}}></Script>
+        {/* // <!-- End Google Tag Manager --> */}
 
         {/* <!-- Google Tag Manager (noscript) --> */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-WBRMKKR"
-            height="0"
-            width="0"
-            style={{display:"none", visibility:"hidden"}}
-          ></iframe>
-        </noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBRMKKR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         {/* <!-- End Google Tag Manager (noscript) --> */}
 
         {/* <!-- Global site tag (gtag.js) - Google Ads: 10876347005 --> */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10876347005"
-        ></script>
-        {/* <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'AW-10876347005');
-        </script> */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1018671206292795"
-          crossOrigin="anonymous"
-        ></script>
-        <meta
-          property="og:title"
-          content="Telas de proteção para sacadas, janelas, piscinas, escadas e onde mais você quiser!"
-        />
-        <meta
-          property="og:description"
-          content="Preço de tela de proteção? (11)9 5497-1933 orçamento grátis."
-        />
-        <meta
-          property="og:url"
-          content="https://www.inovareredesdeprotecao.com.br/"
-        />
-        <meta property="og:type" content="website"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta
-          name="google-site-verification"
-          content="kMJ2VUUTMm2TdYmxpFy_DdCcanD4zkR_S4WW65TRj-U"
-        />
-        <meta property="og:site_name" content="Inovare redes de Proteção" />
-        <meta
-          property="og:image"
-          content="https://inovareredesdeprotecao.com.br/src/components/images/img/logoInovare.svg"
-        />
-        <meta property="og:type" content="website" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10876347005"></script>
+        <Script strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-10876347005');
+        `}}>
+        </Script>
       </Head>
-      <Script>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=UA-229986521-2"
-            height="0"
-            width="0"
-            style={{display:"none", visibility:"hidden"}}
-          ></iframe>
-        </noscript>
-      </Script>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-229986521-2"
-      />
       <AlertProvider template={AlertTemplate} {...options}>
         <FloatWhats>
           <Linkao
